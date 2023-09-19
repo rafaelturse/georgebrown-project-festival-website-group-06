@@ -22,11 +22,7 @@ function getArtists() {
 function getLi(array) {
     let result = ""
     
-    for (let i of array) { 
-        result += `<li>`
-        result += `${i}`
-        result += `</li>`
-    }
+    for (let i of array) { result += `<li>${i}</li>` }
 
     return result
 }
