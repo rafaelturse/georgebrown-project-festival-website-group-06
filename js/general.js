@@ -6,12 +6,20 @@
 function printArrayValues(array) { for (let i of array){ console.log(i) } }
 
 /**
- * Return a list of js literals objects
+ * Convert numbers into currency 
  * 
- * @returns artists
+ * @param {*} number 
+ * @returns currency
+ */
+function toCurrency(number) { return "$" + new Intl.NumberFormat().format(number) }
+
+/**
+ * Assembly a of all js artists literals objects 
+ * 
+ * @returns : a list of js artists literals objects
  */
 function getArtists() {
-    var artists = []
+    let artists = []
 
     artists.push(artistTheBeatles)
     artists.push(artistBlackSabbath)
@@ -27,7 +35,7 @@ function getArtists() {
  * @returns values surrounded by li tags
  */
 function getLi(array) {
-    var result = ""
+    let result = ""
     
     for (let i of array) { 
         result += `<li>`
@@ -61,7 +69,8 @@ function artistsToHTML (artists) {
 }
 
 /**
- * An HTML section referred as "artists" is required
+ * An HTML section referred as "artists" is required to be replace with artists data
+ * 
  */
 function getHtmlArtists() {
     let artistSection = document.getElementById("artists")
@@ -70,5 +79,36 @@ function getHtmlArtists() {
     /* if artists section not exist, so exit */
     if (!artistSection) return ""
 
+    /* write artist info into html page */
     artistSection.innerHTML = artistsToHTML(artists)
+}
+
+/**
+ * 
+ * 
+ */
+function getTicketReport() {
+    let ticket = ""
+    
+    let ticketreport = document.getElementById("ticketreport")
+    
+    let radioTicketType = document.querySelector('input[name="tickettype"]:checked').value;
+    let ticketquantity = document.getElementById("ticketquantity").value
+    let creditcardnumber = document.getElementById("creditcardnumber").value
+    let unitprice = 0
+    
+    if (radioTicketType === "ticketcheap") { unitprice = document.getElementById("id_cheap_ticket_price").innerText }
+    else if (radioTicketType === "ticketexpensive") { unitprice = document.getElementById("id_expensive_ticket_price").innerText }
+
+    let subtotal = ticketquantity * unitprice
+    let tax = subtotal * 0.13
+    let finalPrice = subtotal + tax
+
+    ticket += `<p>Number of tickets: ${toCurrency(ticketquantity)} </p>`
+    ticket += `<p>Price per ticket: ${toCurrency(unitprice)}</p>`
+    ticket += `<p>Subtotal: ${toCurrency(subtotal)} </p>`
+    ticket += `<p>Tax (13%): ${toCurrency(tax)} </p>`
+    ticket += `<p>Final Price: ${toCurrency(finalPrice)} </p>`
+
+    ticketreport.innerHTML = ticket
 }

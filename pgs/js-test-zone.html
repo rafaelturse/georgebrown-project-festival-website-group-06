@@ -11,7 +11,34 @@
     <!-- to receive artists literals objects -->
     <section id="artists"></section>
 
-    <button type="button" onclick="getHtmlArtists()">Click Me!</button>
+    <button type="button" onclick="getHtmlArtists()">get artists</button>
+
+    <br><br>
+
+    <!-- to receive artists literals objects -->
+    <p id="id_cheap_ticket_price">100</p>
+    <p id="id_expensive_ticket_price">250</p>
+
+    <form>
+      <!-- ticket type -->
+      <input type="radio" id="ticketcheap" name="tickettype" value="ticketcheap">
+      <label for="ticketcheap">ticket cheap</label><br>
+    
+      <input type="radio" id="ticketexpensive" name="tickettype" value="ticketexpensive">
+      <label for="ticketexpensive">ticket expensive</label><br>
+    
+      <label for="ticketquantity">ticket quantity:</label><br />
+      <input type="text" id="ticketquantity" name="ticketquantity" value="1" /><br />
+
+      <label for="creditcardnumber">credit card number:</label><br />
+      <input type="text" id="creditcardnumber" name="creditcardnumber" value="123456" /><br />
+    </form>
+
+    <br /><br />
+    <input type="submit" onclick="getTicketReport()" value="Submit" />
+    
+    <br /><br />
+    <section id="ticketreport" ></section>
   </body>
 
   <script src="../js/literals.js"></script>

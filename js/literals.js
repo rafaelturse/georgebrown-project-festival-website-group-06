@@ -22,10 +22,10 @@ const artistTheBeatles = {
         `In My Life`, 
         `Strawberry Fields Forever` 
     ]
-};
+}
 
 const artistBlackSabbath = {
-    photo: ``,
+    photo: `../assets/img/the-beatles.jpg`,
     name: `Black Sabbath`,
     performingTimes: [
         `2023-10-07 6h00 PM`,
@@ -48,10 +48,10 @@ const artistBlackSabbath = {
         `Planet Caravan`, 
         `The Wizard`
     ]
-};
+}
 
 const artistOzzyOsbourne = {
-    photo: ``,
+    photo: `../assets/img/the-beatles.jpg`,
     name: `Ozzy Osbourne`,
     performingTimes: [
         `2023-10-07 4h00 PM`,
@@ -74,4 +74,4 @@ const artistOzzyOsbourne = {
         `Close My Eyes Forever`, 
         `Hellraiser`
     ]
-};
+}
