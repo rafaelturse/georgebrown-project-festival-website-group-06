@@ -21,24 +21,26 @@
 
     <form>
       <!-- ticket type -->
-      <input type="radio" id="ticketcheap" name="tickettype" value="ticketcheap">
-      <label for="ticketcheap">ticket cheap</label><br>
+      <input type="radio" id="ticketCheap" name="ticketType" value="ticketCheap" checked>
+      <label for="ticketCheap">Ticket Cheap</label><br>
     
-      <input type="radio" id="ticketexpensive" name="tickettype" value="ticketexpensive">
-      <label for="ticketexpensive">ticket expensive</label><br>
+      <input type="radio" id="ticketExpensive" name="ticketType" value="ticketExpensive">
+      <label for="ticketExpensive">Ticket Expensive</label><br>
     
-      <label for="ticketquantity">ticket quantity:</label><br />
-      <input type="text" id="ticketquantity" name="ticketquantity" value="1" /><br />
+      <br />
+      <label for="ticketQuantity">Ticket Quantity:</label><br />
+      <input type="text" id="ticketQuantity" name="ticketQuantity" value="1" /><br />
 
-      <label for="creditcardnumber">credit card number:</label><br />
-      <input type="text" id="creditcardnumber" name="creditcardnumber" value="123456" /><br />
+      <br />
+      <label for="creditCardNumber">Credit Card Number:</label><br />
+      <input type="text" id="creditCardNumber" name="creditCardNumber" value="1234567890123456" /><br />
     </form>
 
     <br /><br />
-    <input type="submit" onclick="getTicketReport()" value="Submit" />
+    <input type="submit" onclick="getTicketReport()" value="Pay Now" />
     
     <br /><br />
-    <section id="ticketreport" ></section>
+    <section id="ticketReport" ></section>
   </body>
 
   <script src="../js/literals.js"></script>
