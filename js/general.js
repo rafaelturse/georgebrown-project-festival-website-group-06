@@ -49,7 +49,9 @@ const assembleArtistCards = () => {
   return cards;
 };
 const artistCards = assembleArtistCards();
-document.getElementById("artist-section").innerHTML = artistCards;
+if (document.getElementById("artist-section")) {
+  document.getElementById("artist-section").innerHTML = artistCards;
+}
 
 /* ############### */
 /* ### TICKETS ### */
@@ -70,7 +72,7 @@ function ticketReportError() {
 function getTicketReport() {
   let ticketReport = document.getElementById("ticket-report");
   let radioTicketType = document.querySelector(
-    'input[name="ticketType"]:checked'
+    'input[name="ticket-type"]:checked'
   ).value;
   let ticketQuantity = document.getElementById("ticket-quantity").value;
   let creditCardNumber = document.getElementById("credit-card-number").value;
@@ -87,7 +89,7 @@ function getTicketReport() {
   }
 
   /* validating fields - quantity */
-  if (isNaN(ticketQuantity)) {
+  if (ticketQuantity <= 0 || isNaN(ticketQuantity)) {
     return ticketReportError();
   }
 
@@ -102,9 +104,7 @@ function getTicketReport() {
   let finalPrice = subtotal + tax;
 
   const ticket = `
-        <p class="ticket-report-p">Number of tickets: ${toCurrency(
-          ticketQuantity
-        )} </p>
+        <p class="ticket-report-p">Number of tickets: ${ticketQuantity} </p>
         <p class="ticket-report-p">Price per ticket: ${toCurrency(
           unitPrice
         )}</p>
@@ -113,5 +113,6 @@ function getTicketReport() {
         <p class="ticket-report-p">Final Price: ${toCurrency(finalPrice)} </p>
     `;
 
-  ticketReport.innerHTML = ticket;
+  // ticketReport.innerHTML = ticket;
+  document.getElementById("ticket-report").innerHTML = ticket;
 }

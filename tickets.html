@@ -74,70 +74,15 @@
           class="form-input"
           id="credit-card-number"
           name="credit-card-number"
-          value="1234567890123456"
         />
         </div>
         </div>
-
-      <button class="form-button" type="submit" onclick="getTicketReport()">Pay Now</button>
       </form>
+      <button class="tickets-button" onclick="getTicketReport()">Pay Now</button>
     <div id="ticket-report" class="ticket-report">
 <!-- ticket report injection here -->
     </div>
     </main>
-
-
-
-<article style="margin-left: 50px;">
-      <br /><br />
-
-      <!-- to receive artists literals objects -->
-      <p id="id_cheap_ticket_price">100</p>
-      <p id="id_expensive_ticket_price">250</p>
-
-      <form>
-        <!-- ticket type -->
-        <input
-          type="radio"
-          id="ticketCheap"
-          name="ticketType"
-          value="ticketCheap"
-          checked
-        />
-        <label for="ticketCheap">Ticket Cheap</label><br />
-
-        <input
-          type="radio"
-          id="ticketExpensive"
-          name="ticketType"
-          value="ticketExpensive"
-        />
-        <label for="ticketExpensive">Ticket Expensive</label><br />
-
-        <br />
-        <label for="ticketQuantity">Ticket Quantity:</label><br />
-        <input
-          type="text"
-          id="ticketQuantity"
-          name="ticketQuantity"
-          value="1"
-        /><br />
-
-        <br />
-        <label for="creditCardNumber">Credit Card Number:</label><br />
-        <input
-          type="text"
-          id="creditCardNumber"
-          name="creditCardNumber"
-          value="1234567890123456"
-        /><br />
-      </form>
-
-      <br /><br />
-      <input type="submit" onclick="getTicketReport()" value="Pay Now" />
-
-      <br /><br />
-    </article>
     <!---------------- TICKETS END -------------->
 
     <!---------------- FOOTER  ----------------->
