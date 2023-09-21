@@ -62,16 +62,12 @@ function toCurrency(number) {
 
 function ticketReportError() {
   /* set error message to the page */
-  document.getElementById(
-    "ticketReport"
-  ).innerHTML = `<p style="color: red">Verify Given Information</p>`;
+  document.getElementById("ticketReport").innerHTML = `<p style="color: red">Verify Given Information</p>`;
 }
 
 function getTicketReport() {
   let ticketReport = document.getElementById("ticketReport");
-  let radioTicketType = document.querySelector(
-    'input[name="ticketType"]:checked'
-  ).value;
+  let radioTicketType = document.querySelector('input[name="ticketType"]:checked').value;
   let ticketQuantity = document.getElementById("ticketQuantity").value;
   let creditCardNumber = document.getElementById("creditCardNumber").value;
   let unitPrice = 0;
@@ -87,14 +83,10 @@ function getTicketReport() {
   }
 
   /* validating fields - quantity */
-  if (isNaN(ticketQuantity)) {
-    return ticketReportError();
-  }
+  if ((ticketQuantity <= 0) || (isNaN(ticketQuantity))) { return ticketReportError(); }
 
   /* validating fields - creditCardNumber */
-  if (isNaN(creditCardNumber) || creditCardNumber.length != 16) {
-    return ticketReportError();
-  }
+  if (isNaN(creditCardNumber) || creditCardNumber.length != 16) { return ticketReportError(); }
 
   /* result */
   let subtotal = ticketQuantity * unitPrice;
