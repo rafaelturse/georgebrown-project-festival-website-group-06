@@ -24,65 +24,77 @@
           <li class="nav-item">
             <a href="/tickets.html" class="nav-link">Tickets</a>
           </li>
-          <li class="nav-item"><a href="#map" class="nav-link">Location</a></li>
+          <li class="nav-item"><a href="/#map" class="nav-link">Location</a></li>
         </ul>
       </nav>
     </header>
     <!---------------- NAVIGATION END ------------->
 
-    <!----------------- MAIN START ---------------->
-    <main class="home-main">
-      <div class="home-main-image"></div>
-      <div class="home-main-text">
-        <h1 class="home-main-title">Music Festival Name</h1>
-        <ul>
-          <li class="home-main-list-item">December 3, 2023</li>
-          <li class="home-main-list-item">December 4, 2023</li>
-          <li class="home-main-list-item">December 5, 2023</li>
-        </ul>
-        <p class="home-main-location">Budweiser Stage, Toronto - ON</p>
-      </div>
-    </main>
-    <!-- Tickets Section  -->
-    <section class="tickets-section">
-      <h2 class="tickets-title">Tickets</h2>
-      <div class="tickets-row">
-        <div class="ticket-card">
-          <h3 class="ticket-card-title">One Day Pass</h3>
-          <span class="ticket-price">$100</span>
-          <ul class="tickets-list">
-            <li>One free drink</li>
-            <li>Access to all performances on one day of your choice</li>
-          </ul>
-          <a href="" class="ticket-button-link">Buy now</a>
-        </div>
+    <!---------------- TICKETS START -------------->
+<article style="margin-left: 50px;">
+      <br /><br />
 
-        <div class="ticket-card">
-          <h3 class="ticket-card-title">All Access Pass</h3>
-          <span class="ticket-price">$285</span>
-          <ul class="tickets-list">
-            <li>Five free drink</li>
-            <li>Access to all performances on all days</li>
-            <li>Access to VIP lines for entrance and food</li>
-          </ul>
-          <a href="" class="ticket-button-link">Buy now</a>
-        </div>
+      <!-- to receive artists literals objects -->
+      <p id="id_cheap_ticket_price">100</p>
+      <p id="id_expensive_ticket_price">250</p>
+
+      <form>
+        <!-- ticket type -->
+        <input
+          type="radio"
+          id="ticketCheap"
+          name="ticketType"
+          value="ticketCheap"
+          checked
+        />
+        <label for="ticketCheap">Ticket Cheap</label><br />
+
+        <input
+          type="radio"
+          id="ticketExpensive"
+          name="ticketType"
+          value="ticketExpensive"
+        />
+        <label for="ticketExpensive">Ticket Expensive</label><br />
+
+        <br />
+        <label for="ticketQuantity">Ticket Quantity:</label><br />
+        <input
+          type="text"
+          id="ticketQuantity"
+          name="ticketQuantity"
+          value="1"
+        /><br />
+
+        <br />
+        <label for="creditCardNumber">Credit Card Number:</label><br />
+        <input
+          type="text"
+          id="creditCardNumber"
+          name="creditCardNumber"
+          value="1234567890123456"
+        /><br />
+      </form>
+
+      <br /><br />
+      <input type="submit" onclick="getTicketReport()" value="Pay Now" />
+
+      <br /><br />
+      <section id="ticketReport"></section>
+    </article>
+
+    <!-- Buy Now Section -->
+
+    <section class="buynow-section">
+      <div>
+        <div></div>
+
+        <div></div>
       </div>
     </section>
-    <section class="map-section" id="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9081809597396!2d-79.4177934237563!3d43.62926997110326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b35108670b76b%3A0x88eb02c63d5c5f51!2sBudweiser%20Stage!5e0!3m2!1sen!2sca!4v1695074585501!5m2!1sen!2sca"
-        width="100%"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </section>
-    <!----------------- MAIN END ---------------->
+    <!---------------- TICKETS END -------------->
 
-    <!------------------ FOOTER ----------------->
+    <!---------------- FOOTER  ----------------->
     <footer>
       <p>Copyright</p>
       <!-- Instagram SVG -->
@@ -174,5 +186,9 @@
         ></path>
       </svg>
     </footer>
+  </body>
+  <script src="./js/general.js"></script>
+</html>
+
   </body>
 </html>
