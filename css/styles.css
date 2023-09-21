@@ -303,33 +303,112 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     cursor: pointer;
-    color:black;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
     background-color: var(--yellow);
-    font-size: 26px;
+    border: none;
+    border-radius: 9999px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
     font-weight: bold;
     margin-top: auto;
     margin-left: auto;
-    padding: 5px 10px;
+    padding: 10px 30px;
 }
 .artist-button-link:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* TIECKTES */
 /* Buy Now section */
 
-.buynow-section{
+.tickets-section {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
     width: 100%;
-    padding: 50px;
-    background-color: rgb(200, 200, 200);
+    height: 800px;
+    background-image: url('https://www.kissfm.es/wp-content/uploads/2022/04/beatles-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.tickets-form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 30px;
+    border: 1px solid var(--yellow);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--gray);
+    font-size: 20px;
+}
+
+.radio-label {
+    margin-left: 10px;
+}
+
+.ticket-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.ticket-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.form-gap {
+    gap: 20px;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid var(--yellow);
+    height: 40px;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 10px 0 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 9999px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+}
+.form-button:hover{
+    transform: scale(1.03);
+}
+
+.ticket-report {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 600px; 
+    height: 500px; 
+    border: 1px solid var(--yellow);
+    color: var(--gray);
+}
+.ticket-report-p{
+    margin-bottom: 5px;
+}
+
+

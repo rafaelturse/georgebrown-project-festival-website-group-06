@@ -31,6 +31,63 @@
     <!---------------- NAVIGATION END ------------->
 
     <!---------------- TICKETS START -------------->
+    <main class="tickets-section">
+      <form class="tickets-form">
+        <div class="ticket-row">
+          <div class="ticket-row">
+            <input
+            type="radio"
+            id="ticket-cheap"
+            name="ticket-type"
+            value="ticket-cheap"
+            checked
+            />
+            <label class="radio-label">One Day Pass</label>
+          </div>
+
+          <div class="ticket-row">
+            <input
+            type="radio"
+            id="ticket-expensive"
+            name="ticket-type"
+            value="ticket-expensive"
+          />
+          <label class="radio-label">All Access Pass</label>
+        </div>
+        </div>
+
+        <div class="ticket-row form-gap">
+          <div class="ticket-col">
+            <label>Ticket Quantity:</label>
+            <input
+            type="text"
+            class="form-input"
+            id="ticket-quantity"
+            name="ticket-quantity"
+            value="1"
+            />
+          </div>
+          <div class="ticket-col">
+        <label>Credit Card Number:</label>
+        <input
+          type="text"
+          class="form-input"
+          id="credit-card-number"
+          name="credit-card-number"
+          value="1234567890123456"
+        />
+        </div>
+        </div>
+
+      <button class="form-button" type="submit" onclick="getTicketReport()">Pay Now</button>
+      </form>
+    <div id="ticket-report" class="ticket-report">
+<!-- ticket report injection here -->
+    </div>
+    </main>
+
+
+
 <article style="margin-left: 50px;">
       <br /><br />
 
@@ -80,18 +137,7 @@
       <input type="submit" onclick="getTicketReport()" value="Pay Now" />
 
       <br /><br />
-      <section id="ticketReport"></section>
     </article>
-
-    <!-- Buy Now Section -->
-
-    <section class="buynow-section">
-      <div>
-        <div></div>
-
-        <div></div>
-      </div>
-    </section>
     <!---------------- TICKETS END -------------->
 
     <!---------------- FOOTER  ----------------->

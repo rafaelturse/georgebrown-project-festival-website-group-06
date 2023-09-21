@@ -63,27 +63,27 @@ function toCurrency(number) {
 function ticketReportError() {
   /* set error message to the page */
   document.getElementById(
-    "ticketReport"
+    "ticket-report"
   ).innerHTML = `<p style="color: red">Verify Given Information</p>`;
 }
 
 function getTicketReport() {
-  let ticketReport = document.getElementById("ticketReport");
+  let ticketReport = document.getElementById("ticket-report");
   let radioTicketType = document.querySelector(
     'input[name="ticketType"]:checked'
   ).value;
-  let ticketQuantity = document.getElementById("ticketQuantity").value;
-  let creditCardNumber = document.getElementById("creditCardNumber").value;
+  let ticketQuantity = document.getElementById("ticket-quantity").value;
+  let creditCardNumber = document.getElementById("credit-card-number").value;
   let unitPrice = 0;
 
   /* if ticketReport section not exist, so exit */
   if (!ticketReport) return "";
 
   /* validating fields - radio */
-  if (radioTicketType === "ticketCheap") {
-    unitPrice = document.getElementById("id_cheap_ticket_price").innerText;
-  } else if (radioTicketType === "ticketExpensive") {
-    unitPrice = document.getElementById("id_expensive_ticket_price").innerText;
+  if (radioTicketType === "ticket-cheap") {
+    unitPrice = 100;
+  } else if (radioTicketType === "ticket-expensive") {
+    unitPrice = 250;
   }
 
   /* validating fields - quantity */
@@ -102,11 +102,15 @@ function getTicketReport() {
   let finalPrice = subtotal + tax;
 
   const ticket = `
-        <p>Number of tickets: ${toCurrency(ticketQuantity)} </p>
-        <p>Price per ticket: ${toCurrency(unitPrice)}</p>
-        <p>Subtotal: ${toCurrency(subtotal)} </p>
-        <p>Tax (13%): ${toCurrency(tax)} </p>
-        <p>Final Price: ${toCurrency(finalPrice)} </p>
+        <p class="ticket-report-p">Number of tickets: ${toCurrency(
+          ticketQuantity
+        )} </p>
+        <p class="ticket-report-p">Price per ticket: ${toCurrency(
+          unitPrice
+        )}</p>
+        <p class="ticket-report-p">Subtotal: ${toCurrency(subtotal)} </p>
+        <p class="ticket-report-p">Tax (13%): ${toCurrency(tax)} </p>
+        <p class="ticket-report-p">Final Price: ${toCurrency(finalPrice)} </p>
     `;
 
   ticketReport.innerHTML = ticket;
