@@ -81,15 +81,10 @@ const artists = [
     }
 ]
 
-/**
- * Assembly line items for a list
- * 
- * @param {*} array : values
- * @returns values surrounded by li tags
- */
 function getLi(array) {
     let result = ""
     
+    /* assembly line items for a list */
     for (let i of array) { result += `<li>${i}</li>` }
 
     return result
