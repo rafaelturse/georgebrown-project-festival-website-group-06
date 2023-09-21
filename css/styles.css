@@ -14,6 +14,7 @@
 
  body {
     font-family: 'Quicksand', 'sans-serif';
+    background-color: var(--gray);
  }
 
  /* global styles */
@@ -21,7 +22,7 @@ header {
     position: relative;
     background-color: var(--blue);
     width: 100%;
-    height: 50px;
+    height: 70px;
     z-index: 10;
 }
 
@@ -36,7 +37,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     background-color: var(--blue);
-    color: white;
+    color: var(--yellow);
     padding: 30px;
 }
 
@@ -45,6 +46,7 @@ footer {
 .nav-list {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -52,6 +54,7 @@ footer {
 
 .nav-item {
     width: 100%;
+    height: 100%;
     list-style: none;
 }
 
@@ -61,10 +64,11 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    height: 100%;
     font-weight: bold;
     cursor: pointer;
-    color: white;
+    color: var(--yellow);
+    font-size: 22px;
 }
 .nav-link:hover {
     background-color: rgba(0, 0, 0, 0.5);
@@ -79,7 +83,7 @@ footer {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    margin-top: -50px;
+    margin-top: -70px;
 }
 
 .home-main-image {
@@ -105,21 +109,28 @@ footer {
     height: 400px;
     margin: auto;
     padding: 50px 10px; 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
-    border: 2px solid white;
+    border: 2px solid var(--blue);
     border-radius: 10px;
-    color: white;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.home-main-title {
+    font-size: 48px;
     font-weight: bold;
 }
 
 .home-main-list-item {
-    font-size: 22px;
+    font-size: 26px;
+    list-style: none;
+    margin-bottom: 5px;
 
 }
 
 .home-main-location {
-    font-size: 22px;
+    font-size: 30px;
 }
 
 /* Tickets section */
@@ -130,42 +141,64 @@ footer {
     align-items: center;
     gap: 50px;
     width: 100%;
-    padding: 50px;
-    background-color: rgb(200, 200, 200);
+    padding: 100px 30px;
+    background-color: var(--blue);
 }
 
 .tickets-title {
     font-size: 48px;
+    color: var(--gray);
+    border-bottom: 3px solid var(--yellow);
+    margin-bottom: 15px;
 }
 
 .tickets-row {
     display: flex;
-    gap: 50px;
+    gap: 150px;
 }
 
 .ticket-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+    width: 350px;
     background-color: black;
     border-radius: 10px;
-    color: white;
+    background-color: var(--gray);
+    color: black;
     padding: 50px;
+    box-shadow: 5px 5px var(--yellow);
+}
+
+.ticket-img {
+    width: 100px;
+    height: 100px;
+}
+.tickets-img {
+    width: 100px;
+    height: 100px;
+    transform: scale(1.5);
 }
 
 .ticket-card-title {
     font-size: 24px;
     margin-bottom: 20px;
+    color: var(--blue);
 }
 
 .ticket-price {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
 }
 
-.tickets-list {
+.ticket-list {
     margin-bottom: 30px;
+    list-style: inside ;
+}
+.ticket-list-item {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .ticket-button-link {
@@ -174,7 +207,7 @@ footer {
     align-items: center;
     text-transform: capitalize;
     cursor: pointer;
-    background-color: white;
+    background-color: var(--yellow);
     border: none;
     border-radius: 9999px;
     text-decoration: none;
@@ -186,11 +219,8 @@ footer {
 }
 
 .ticket-button-link:hover{
-    background-color: grey;
+    transform: scale(1.03);
 }
-
-
-
 
 /* Map section */
 .map-section {
@@ -200,6 +230,11 @@ footer {
     width: 80%;
     height: 400px;
     margin: 80px auto;
+}
+
+#map {
+    width: 900px;
+    height: 500px;
 }
 
 /* Footer  */

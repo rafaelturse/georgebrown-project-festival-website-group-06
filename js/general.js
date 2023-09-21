@@ -41,7 +41,7 @@ const assembleArtistCards = () => {
           <p class="artist-card-text">${artist.performingTimes}</p>
           <p class="artist-card-text">${artist.musicGenre}</p>
           <p class="artist-card-text">${artist.popularSong}</p>
-          <a class="artist-button-link">Buy Ticket</a>
+          <a href="/tickets.html" class="artist-button-link">Buy Ticket</a>
         </div>
       </div>
         `;
